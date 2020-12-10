@@ -1,1 +1,1 @@
-hogwarts autotest lessions homework set
+hogwarts auto-testing lessons homework set
