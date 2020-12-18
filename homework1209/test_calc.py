@@ -12,7 +12,7 @@ class TestCalc:
         print("结束计算")
 
     @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['add'])
-    def test_add(self, a, b, expect, login):
+    def test_add(self, a, b, expect):
         assert self.calc.add(a, b) == expect
 
     @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['sub'])

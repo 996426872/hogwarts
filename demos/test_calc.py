@@ -13,16 +13,6 @@ class TestCalc:
 
     @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['add'])
     def test_add(self, a, b, expect, login):
+        print("执行加法{}+{}={}".format(a, b, expect))
+        # print(login)
         assert self.calc.add(a, b) == expect
-
-    @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['sub'])
-    def test_sub(self, a, b, expect):
-        assert self.calc.sub(a, b) == expect
-
-    @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['mul'])
-    def test_mul(self, a, b, expect):
-        assert self.calc.mul(a, b) == expect
-
-    @pytest.mark.parametrize("a,b,expect", yaml.safe_load(open("calc.yml", 'r'))['div'])
-    def test_div(self, a, b, expect):
-        assert self.calc.div(a, b) == expect

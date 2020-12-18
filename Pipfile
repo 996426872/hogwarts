@@ -7,6 +7,9 @@ name = "pypi"
 selenium = "*"
 pytest = "*"
 python-dotenv = "*"
+pyyaml = "*"
+pytest-xdist = "*"
+pytest-ordering = "*"
 
 [dev-packages]
 

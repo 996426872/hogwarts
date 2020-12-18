@@ -1,9 +1,12 @@
 import pytest
 
 
-@pytest.fixture()
-def login():
-    print("输入账户密码登录！")
+@pytest.fixture(params=['第一个参数', '第二个参数', '第三个参数'])
+def login(request):
+    print(request.param)
+    yield
+    print("退出登录")
+
 
 
 @pytest.fixture()
