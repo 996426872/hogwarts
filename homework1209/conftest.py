@@ -7,6 +7,10 @@ print("计算器的内存地址是", id(cal))
 cal_data = yaml.safe_load(open("calc.yml", 'r'))
 
 
+@pytest.fixture()
+def get_calculator():
+    return cal
+
 
 @pytest.fixture(scope="class")
 def cal_begin_end():
@@ -35,7 +39,5 @@ def get_div_data(request):
     return request.param
 
 
-@pytest.fixture()
-def get_calculator():
-    return cal
+
 
