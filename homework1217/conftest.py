@@ -3,7 +3,7 @@ import yaml
 from selenium import webdriver
 
 
-@pytest.fixture(scope="class",autouse="True")
+@pytest.fixture(scope="class", autouse="True")
 def get_cookies():
     option = webdriver.ChromeOptions()
     option.debugger_address = "127.0.0.1:9222"
