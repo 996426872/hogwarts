@@ -10,6 +10,7 @@ python-dotenv = "*"
 pyyaml = "*"
 pytest-xdist = "*"
 pytest-ordering = "*"
+appium-python-client = "*"
 
 [dev-packages]
 
